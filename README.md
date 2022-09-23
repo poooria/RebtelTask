@@ -56,9 +56,9 @@ Authorization also can be done through Swagger interface.
 
 
 # Screenshots
-![screenshot1](./documents/img/1.jpg)
-![screenshot2](./documents/img/2.jpg)
-![screenshot3](./documents/img/3.jpg)
+![screenshot1](./documents/Screenshots/1.jpg)
+![screenshot2](./documents/Screenshots/2.jpg)
+![screenshot3](./documents/Screenshots/3.jpg)
 
 
 
