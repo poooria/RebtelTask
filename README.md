@@ -22,8 +22,7 @@ Decomposition of the whole project based on DDD approach led to 3 different main
 
 Although, in this project there are no modification commands such as insert and update based on the requirement document, the CQRS and Mediator pattern has been applied widely to segregate the query and command which is very useful when we decide to separate the write and read databases. There are also other benefits using Mediator patterns such as making thin and more testable controllers.
 
-##services
-Services:
+##Services:
 1- Book.API : All required data about the books will be stored and retrieve independently to other services such as name, author, publication and etc. it exposes Grpc service which is responsible to get the data from repository and return back to the caller.
 2- Borrwo.API : it is responsible to store and retrieve all data about the borrowed books, for example, book id, user id, borrowed date and etc. this service is also exposes Grpc service and has its own logic implementation to creating queries in order to fetch the right data.
 3- User.API : This service maintain the required data for the client of the library (Borrowers) which include information like first name, phone no, address and etc.some DDD consideration also has been applied in its entities, for example, there is an aggregator entity named User which has some small business roles (constructor) and has some value objects like address.
