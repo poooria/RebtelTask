@@ -11,7 +11,7 @@
 
 
 
-##architecture
+#architecture
 Architecture overview :
 Based on the requirement document analyzing, Microservice architecture has been chosen to create multiple cloud native backend services which might communicate together based on the purpose of project definitions.
 Decomposition of the whole project based on DDD approach led to 3 different main Projects including 1-Book.API, 2-Borrwo.API, 3-User.API and one aggregator project named Library. Aggregator which is responsible for communicating with other 3 mentioned backend services using Grpc technology.Also clean architecture has been applied which means for example Borrow project itself including 4 projects: 
