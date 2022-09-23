@@ -95,7 +95,7 @@ public static class ServiceExtensions
         services.AddSwaggerExamplesFromAssemblies(Assembly.GetEntryAssembly());
         services.AddSwaggerGen(swagger =>
         {
-            swagger.SwaggerDoc("v1", new OpenApiInfo { Title = "Rebtel API Aggregator", Version = "v1", Description = "First, call /token/login to get authorization token and then set header authorization JWT token(Bearer)" });
+            swagger.SwaggerDoc("v1", new OpenApiInfo { Title = "Rebtel API Aggregator", Version = "v1", Description = "First, call /api/authenticate to get authorization token and then set header authorization JWT token(Bearer)" });
             swagger.EnableAnnotations();
             swagger.ExampleFilters();
             var filePath = Path.Combine(System.AppContext.BaseDirectory, "Library.Aggregator.xml");
