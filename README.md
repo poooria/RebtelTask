@@ -5,7 +5,8 @@
 * [Services](#services)
 * [Domain Driven Design Consideration](#ddd)
 * [Technologies and Libraries Used](#technologies)
-* [API Documentation](#api-documentations)
+* [Services Communication](#services_communication)
+* [API Documentations](#api-documentations)
 * [Testing](#testing)
 * [Screenshots](#screenshots)
 
@@ -53,22 +54,22 @@ Swashbuck Swagger
 
 Xunit Test
 
-# Services Communication
+# Services Communication <a name="services_communication"/>
 Communicating among the different services is the common challenge and nature of the Microservice architecture, for example, in this project there is an aggregator project applying back end for front end pattern which is the best practice to provide back services for different front-end consumers such as mobile and web. In this service there is a need to fetch data from the other services and aggregate and expose them to the consumer. so there is a need to communicate with other services which have two different approaches including synchronous and asynchronous ways.In this project I have used Grpc communication which is one of the most speedy way in the synchronous approaches.According to the requirements, there is no need to leverage asynchronous communications, but it is very common and useful and has many advantages in comparison to the synchronous which has its own challenges like chaining requests, increasing delays and failed response rate.For example, I think the asynchronous communication can be used when the borrower returns the book to the library by publishing the event to the message bus, which the Book service can consume to update the available copies of the returned book.In this project code first approach has been used which is very clean and maintainable in comparison to proto file creation, There is a Nuget package named Protobuff-net.Grpc which makes it super easy to create the contract and share between clients and server. (By using this approach you can make your own Nuget package from your contract and share it among the whole developer teams.)In every back service project there is a project whose name ends with "Contracts", that holds the types and classes required by the Grpc services.
 
 
-# api-documentations
+# API Documentations <a name="api-documentations"/>
 Rich API documentations are provided by leveraging and configuring the Swagger.
 All methods input names, descriptions, types and the different returned status code are described and documented.
 Authorization also can be done through Swagger interface.
 
-# testing
+# Testing <a name="testing"/>
 All projects in any level have their own unit and integration tests which helps create robust and reliable software. There is a folder in each service root folder named tests that includes all required units and integration tests. I have tried to cover as many as I can to cover all codes and logics in the different levels with different test scenarios and strategies. In the test scenarios different techniques such as mocking, in memory databases have been used and most of the methods have been created by using TDD approach.
 
 
 
 
-# Screenshots
+# Screenshots <a name="screenshots"/>
 ![screenshot1](./Documents/Screenshots/1.png)
 ![screenshot2](./Documents/Screenshots/2.png)
 ![screenshot3](./Documents/Screenshots/3.png)
