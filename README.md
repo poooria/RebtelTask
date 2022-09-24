@@ -33,7 +33,6 @@ Also some entities in this project are avoided to be anemic, although there are 
 
 <a name="#technologies"/>
 # Technologies and Libraries Used
-
 According to the task I have applied the following technologies:
 ASP.Net Core 6.0
 Microsoft Sql Server
