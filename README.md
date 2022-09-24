@@ -27,7 +27,7 @@ Service Communication :
 3- User.API : This service maintain the required data for the client of the library (Borrowers) which include information like first name, phone no, address and etc.some DDD consideration also has been applied in its entities, for example, there is an aggregator entity named User which has some small business roles (constructor) and has some value objects like address.
 4- Identity.API : security is one of the most important part of the each system and there is no exception for library too!, so this service provides JWT token for authenticating users among the aggregator api calls and it is separated api which can be leveraged by the other internal services or not (I have assumption about the running environment of this project in the cloud, which internal services can be hide in the isolated network and there is no need to be protected, however it can be done simply by using this service through add Authorization headers in each grpc call).
 
-# domain_driven_design_consideration
+## domain_driven_design_consideration
 As mentioned earlier this project need to be decomposed to multiple independent services and this could be done by leveraging DDD approach. the more precession and  experience in DDD, the more undependability and less coupled services will be gained, which is the success key in the microservices and cloud native architecture.
 Also some entities in this project are avoided to be anemic, although there are no complex logics in the entitles to be considered.
 
