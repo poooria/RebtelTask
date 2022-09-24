@@ -1,7 +1,7 @@
 # Rebtel Library Project
 
 ## Table of Contents
-* [Architecture overview](#architecture)
+* [Architecture](#architecture)
 * [Services](#services)
 * [Domain Driven Design Consideration](#ddd)
 * [Technologies and Libraries Used](#technologies)
