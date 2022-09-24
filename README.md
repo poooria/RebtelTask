@@ -2,7 +2,7 @@
 
 ## Table of Contents
 * [Architecture overview](#architecture)
-* [Services Communication](#services)
+* [Services](#services)
 * [Domain Driven Design Consideration](#ddd)
 * [Technologies and Libraries Used](#technologies)
 * [API Documentation](#api-documentations)
