@@ -21,15 +21,15 @@ Decomposition of the whole project based on DDD approach led to 3 different main
 4-Borrow.API, which is the most outer layer and references the 3 mentioned projects and expose the Grpc service to be consumed by the aggregator Api.
 
 Although, in this project there are no modification commands such as insert and update based on the requirement document, the CQRS and Mediator pattern has been applied widely to segregate the query and command which is very useful when we decide to separate the write and read databases. There are also other benefits using Mediator patterns such as making thin and more testable controllers.
-<a name="#services"/>
-# Services
+
+# Services <a name="#services"/>
 1- Book.API : All required data about the books will be stored and retrieve independently to other services such as name, author, publication and etc. it exposes Grpc service which is responsible to get the data from repository and return back to the caller.
 2- Borrwo.API : it is responsible to store and retrieve all data about the borrowed books, for example, book id, user id, borrowed date and etc. this service is also exposes Grpc service and has its own logic implementation to creating queries in order to fetch the right data.
 3- User.API : This service maintain the required data for the client of the library (Borrowers) which include information like first name, phone no, address and etc.some DDD consideration also has been applied in its entities, for example, there is an aggregator entity named User which has some small business roles (constructor) and has some value objects like address.
 4- Identity.API : security is one of the most important part of the each system and there is no exception for library too!, so this service provides JWT token for authenticating users among the aggregator api calls and it is separated api which can be leveraged by the other internal services or not (I have assumption about the running environment of this project in the cloud, which internal services can be hide in the isolated network and there is no need to be protected, however it can be done simply by using this service through add Authorization headers in each grpc call).
 
-<a name="#ddd"/>
-# Domain Driven Design Consideration
+
+# Domain Driven Design Consideration <a name="#ddd"/>
 As mentioned earlier this project need to be decomposed to multiple independent services and this could be done by leveraging DDD approach. the more precession and  experience in DDD, the more undependability and less coupled services will be gained, which is the success key in the microservices and cloud native architecture.
 Also some entities in this project are avoided to be anemic, although there are no complex logics in the entitles to be considered.
 
