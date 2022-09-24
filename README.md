@@ -36,13 +36,21 @@ Also some entities in this project are avoided to be anemic, although there are 
 
 # Technologies and Libraries Used <a name="technologies"/>
 According to the task I have applied the following technologies:
+
 ASP.Net Core 6.0
+
 Microsoft Sql Server
+
 Entityframework.Core 6.0
+
 Grpc server and client communications
+
 Protobuff-net.Grpc for code first Grpc
+
 MediatR 10.0
+
 Swashbuck Swagger
+
 Xunit Test
 
 # Services Communication
