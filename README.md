@@ -2,7 +2,7 @@
 
 ## Table of Contents
 * [Architecture overview](#architecture)
-* [Services Communication](#services-communication)
+* [Services Communication](#Services_Communication)
 * [Domain Driven Design Consideration](#domain_driven_design_consideration)
 * [Technologies and Libraries Used](#technologies-and-libraries-used)
 * [API Documentation](#api-documentations)
@@ -20,7 +20,7 @@ Decomposition of the whole project based on DDD approach led to 3 different main
 4-Borrow.API, which is the most outer layer and references the 3 mentioned projects and expose the Grpc service to be consumed by the aggregator Api.
 
 Although, in this project there are no modification commands such as insert and update based on the requirement document, the CQRS and Mediator pattern has been applied widely to segregate the query and command which is very useful when we decide to separate the write and read databases. There are also other benefits using Mediator patterns such as making thin and more testable controllers.
-# Services-communication
+# Services Communication
 Service Communication : 
 1- Book.API : All required data about the books will be stored and retrieve independently to other services such as name, author, publication and etc. it exposes Grpc service which is responsible to get the data from repository and return back to the caller.
 2- Borrwo.API : it is responsible to store and retrieve all data about the borrowed books, for example, book id, user id, borrowed date and etc. this service is also exposes Grpc service and has its own logic implementation to creating queries in order to fetch the right data.
